@@ -1119,7 +1119,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9333fa0e8325cb946bb328ea7bb93ab3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 10
+  speed: 15
   countText: {fileID: 710773361}
   winText: {fileID: 514436343}
 --- !u!54 &1601630467
