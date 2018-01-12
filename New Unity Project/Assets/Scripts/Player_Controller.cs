@@ -43,8 +43,8 @@ public class Player_Controller : MonoBehaviour
 
     void SetCountText ()
     {
-        countText.text = "Count: " + count.ToString();
-        if (count >= 7)
+        countText.text = "Count: " + count.ToString() + "   / 8";
+        if (count >= 8)
         {
             winText.text = "YOU WIN!!";
         }
