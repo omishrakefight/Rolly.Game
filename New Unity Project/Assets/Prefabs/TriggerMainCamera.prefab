@@ -22,6 +22,7 @@ GameObject:
   - component: {fileID: 33648111414987118}
   - component: {fileID: 64065030255579676}
   - component: {fileID: 23282483228283760}
+  - component: {fileID: 114868580811507654}
   m_Layer: 0
   m_Name: TriggerMainCamera
   m_TagString: triggerMainCamera
@@ -36,12 +37,12 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1716993041923904}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -13.771419, y: 13.056595, z: -5.421253}
-  m_LocalScale: {x: 0.55473506, y: 0.9089334, z: 0.3284567}
+  m_LocalPosition: {x: -13.771419, y: 13.056595, z: -3.45}
+  m_LocalScale: {x: 0.55474, y: 0.90893, z: 0.32845998}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!23 &23282483228283760
 MeshRenderer:
   m_ObjectHideFlags: 1
@@ -97,3 +98,17 @@ MeshCollider:
   m_CookingOptions: 14
   m_SkinWidth: 0.01
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &114868580811507654
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1716993041923904}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7aa197c20246f684895d57fc57d2e53e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SecondCamera: {fileID: 0}
+  MainCamera: {fileID: 0}
+  player: {fileID: 0}

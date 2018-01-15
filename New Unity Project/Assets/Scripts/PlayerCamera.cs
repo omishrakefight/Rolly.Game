@@ -20,14 +20,33 @@ public class PlayerCamera : MonoBehaviour {
 	// Update is called once per frame
 	void LateUpdate () {
         transform.position = player.transform.position + offset;
-		
-	}
+
+    }
 
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))
             ShowSecondCamera();
     }
+
+    /*
+    void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.name == "TriggerSecondCamera")
+        {
+            ShowSecondCamera();
+        }
+
+        if (collision.gameObject.name == "TriggerMainCamera")
+        {
+            ShowMainCamera();
+        }
+
+
+    }
+    */
+
+
 
     public void ShowSecondCamera()
     {

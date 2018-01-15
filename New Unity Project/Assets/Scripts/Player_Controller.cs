@@ -9,6 +9,7 @@ public class Player_Controller : MonoBehaviour
     public float speed;
     public Text countText;
     public Text winText;
+    private int movement;
 
     private Rigidbody rb;
 
@@ -20,15 +21,28 @@ public class Player_Controller : MonoBehaviour
         count = 0;
         SetCountText();
         winText.text = "";
+        movement = 1;
     }
 
     void FixedUpdate()
     {
-        float moveHorizontal = Input.GetAxis("Horizontal");
-        float moveVerticle = Input.GetAxis("Vertical");
+        if (movement == 1)
+        {
+            float moveHorizontal = Input.GetAxis("Horizontal");
+            float moveVerticle = Input.GetAxis("Vertical");
 
-        Vector3 movement = new Vector3(moveHorizontal, 0.0f, moveVerticle);
-        rb.AddForce(movement * speed);
+            Vector3 movement = new Vector3(moveHorizontal, 0.0f, moveVerticle);
+            rb.AddForce(movement * speed);
+        }
+        if (movement == 2)
+        {
+            float moveHorizontal = Input.GetAxis("Horizontal");
+            float moveVerticle = Input.GetAxis("Vertical");
+
+            Vector3 movement = new Vector3(-moveHorizontal, 0.0f, -moveVerticle);
+            rb.AddForce(movement * speed);
+        }
+        
     }
 
     void OnTriggerEnter(Collider other)
@@ -39,7 +53,20 @@ public class Player_Controller : MonoBehaviour
             count++;
             SetCountText();
         }
+
+    // CAMERA CONTROL HERE, MAIN
+        if (other.gameObject.CompareTag("triggerMainCamera"))
+        {
+            movement = 1;
+        }
+    // CAMERA CONTROL SECOND
+        if (other.gameObject.CompareTag("triggerSecondCamera"))
+        {
+            movement = 2;
+        }
     }
+
+
 
     void SetCountText ()
     {
