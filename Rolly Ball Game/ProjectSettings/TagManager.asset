@@ -7,6 +7,7 @@ TagManager:
   - Pick Up
   - triggerMainCamera
   - triggerSecondCamera
+  - Burn Block
   layers:
   - Default
   - TransparentFX
