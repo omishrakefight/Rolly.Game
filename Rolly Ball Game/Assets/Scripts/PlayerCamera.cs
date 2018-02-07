@@ -14,13 +14,11 @@ public class PlayerCamera : MonoBehaviour {
 	void Start () {
         offset = transform.position - player.transform.position;
         ShowMainCamera();
-     
     }
 	
 	// Update is called once per frame
 	void LateUpdate () {
         transform.position = player.transform.position + offset;
-
     }
 
     private void OnTriggerEnter(Collider other)
@@ -65,5 +63,3 @@ public class PlayerCamera : MonoBehaviour {
 
 
 }
-
-
