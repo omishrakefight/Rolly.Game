@@ -17,13 +17,31 @@ public class Final_Pickup : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (LoadNewLevel == 1f)
+
+    }
+
+
+
+    void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.CompareTag("Player"))
         {
-            StartCoroutine(LoadYourAsyncScene());
+            Invoke("LoadNextLevel", 2f);
         }
     }
 
-    IEnumerator LoadYourAsyncScene()
+    private void LoadNextLevel()
+    {
+        SceneManager.LoadScene(1);
+    }
+}
+
+//Time.time + 5.0f
+//&& Time.time > LoadNewLevel
+
+
+/*
+ *     IEnumerator LoadYourAsyncScene()
     {
         // The Application loads the Scene in the background at the same time as the current Scene.
         //This is particularly good for creating loading screens. You could also load the Scene by build //number.
@@ -38,14 +56,8 @@ public class Final_Pickup : MonoBehaviour
         SceneManager.SetActiveScene(scene);
     }
 
-    void OnTriggerEnter(Collider other)
-    {
-        if (other.gameObject.CompareTag("Player"))
+      if (LoadNewLevel == 1f)
         {
-            LoadNewLevel = 1f;
+            StartCoroutine(LoadYourAsyncScene());
         }
-    }
-}
-
-//Time.time + 5.0f
-//&& Time.time > LoadNewLevel
+*/

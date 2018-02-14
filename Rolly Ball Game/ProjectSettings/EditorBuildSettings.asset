@@ -6,5 +6,8 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/_Scenes/BallGame.unity
+    path: Assets/_Scenes/Level 1.unity
     guid: d1a06695cf07753468a37513e2fe03ad
+  - enabled: 1
+    path: Assets/_Scenes/Level 2.unity
+    guid: f83fbbc32793f94489037a9c695cd9cd
