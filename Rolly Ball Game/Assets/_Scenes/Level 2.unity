@@ -43,7 +43,7 @@ RenderSettings:
 LightmapSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 11
-  m_GIWorkflowMode: 0
+  m_GIWorkflowMode: 1
   m_GISettings:
     serializedVersion: 2
     m_BounceScale: 1
@@ -89,7 +89,8 @@ LightmapSettings:
     m_PVRFilteringAtrousPositionSigmaIndirect: 2
     m_PVRFilteringAtrousPositionSigmaAO: 1
     m_ShowResolutionOverlay: 1
-  m_LightingDataAsset: {fileID: 0}
+  m_LightingDataAsset: {fileID: 112000002, guid: 05b016b51938cee4e84d8e1725370e39,
+    type: 2}
   m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
@@ -152,6 +153,16 @@ Prefab:
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114123322973072740, guid: adcce00ad9604774f8ddcf8de05bff1c,
+        type: 2}
+      propertyPath: countText
+      value: 
+      objectReference: {fileID: 449406686}
+    - target: {fileID: 114123322973072740, guid: adcce00ad9604774f8ddcf8de05bff1c,
+        type: 2}
+      propertyPath: winText
+      value: 
+      objectReference: {fileID: 1879549639}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: adcce00ad9604774f8ddcf8de05bff1c, type: 2}
   m_IsPrefabParent: 0
@@ -202,26 +213,6 @@ Prefab:
     - target: {fileID: 1176946230383206, guid: dd4c77cf2498c5745a1180004e9e701d, type: 2}
       propertyPath: m_Name
       value: Burn Block (2)
-      objectReference: {fileID: 0}
-    - target: {fileID: 4820540849498514, guid: dd4c77cf2498c5745a1180004e9e701d, type: 2}
-      propertyPath: m_LocalScale.x
-      value: 4.38714
-      objectReference: {fileID: 0}
-    - target: {fileID: 4820540849498514, guid: dd4c77cf2498c5745a1180004e9e701d, type: 2}
-      propertyPath: m_LocalScale.y
-      value: 1.22469
-      objectReference: {fileID: 0}
-    - target: {fileID: 4820540849498514, guid: dd4c77cf2498c5745a1180004e9e701d, type: 2}
-      propertyPath: m_LocalScale.z
-      value: 1.3762699
-      objectReference: {fileID: 0}
-    - target: {fileID: 4820540849498514, guid: dd4c77cf2498c5745a1180004e9e701d, type: 2}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4820540849498514, guid: dd4c77cf2498c5745a1180004e9e701d, type: 2}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 90
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: dd4c77cf2498c5745a1180004e9e701d, type: 2}
@@ -952,7 +943,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4820540849498514, guid: dd4c77cf2498c5745a1180004e9e701d, type: 2}
       propertyPath: m_LocalRotation.y
-      value: 0.32249427
+      value: 0.3224943
       objectReference: {fileID: 0}
     - target: {fileID: 4820540849498514, guid: dd4c77cf2498c5745a1180004e9e701d, type: 2}
       propertyPath: m_LocalRotation.z
@@ -960,7 +951,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4820540849498514, guid: dd4c77cf2498c5745a1180004e9e701d, type: 2}
       propertyPath: m_LocalRotation.w
-      value: 0.9465714
+      value: 0.94657147
       objectReference: {fileID: 0}
     - target: {fileID: 4820540849498514, guid: dd4c77cf2498c5745a1180004e9e701d, type: 2}
       propertyPath: m_RootOrder
@@ -2535,7 +2526,7 @@ AudioListener:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2134731834}
-  m_Enabled: 1
+  m_Enabled: 0
 --- !u!124 &2134731836
 Behaviour:
   m_ObjectHideFlags: 0

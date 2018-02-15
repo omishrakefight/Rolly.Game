@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class Player_Controller : MonoBehaviour
 {
@@ -9,7 +10,7 @@ public class Player_Controller : MonoBehaviour
     public float speed;
     public Text countText;
     public Text winText;
-    private int movement;
+    int movement;
 
     private Rigidbody rb;
 
@@ -47,6 +48,11 @@ public class Player_Controller : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
+        if (other.gameObject.CompareTag("Burn Block"))
+        {
+            SceneManager.LoadScene(1);
+        }
+
         if (other.gameObject.CompareTag("Pick Up"))
         {
             other.gameObject.SetActive(false);
