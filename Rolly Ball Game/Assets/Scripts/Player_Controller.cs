@@ -11,6 +11,7 @@ public class Player_Controller : MonoBehaviour
     public Text countText;
     public Text winText;
     int movement;
+    int currentLevel = 0;
 
     private Rigidbody rb;
 
@@ -50,7 +51,7 @@ public class Player_Controller : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Burn Block"))
         {
-            SceneManager.LoadScene(1);
+            SendMessage("Restart");
         }
 
         if (other.gameObject.CompareTag("Pick Up"))
@@ -84,3 +85,7 @@ public class Player_Controller : MonoBehaviour
     }
 
 }
+
+//  Levels level = GetComponent<Levels>();
+
+//Levels.GetLevel(currentLevel);
