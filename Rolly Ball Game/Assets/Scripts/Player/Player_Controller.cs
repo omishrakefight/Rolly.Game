@@ -11,7 +11,6 @@ public class Player_Controller : MonoBehaviour
     public Text countText;
     public Text winText;
     int movement;
-    int currentLevel = 0;
 
     private Rigidbody rb;
 

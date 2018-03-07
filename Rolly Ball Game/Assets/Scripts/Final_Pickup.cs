@@ -26,13 +26,13 @@ public class Final_Pickup : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            Invoke("LoadNextLevel", 2f);
+            Invoke("ReadyNextLevel", 2f);
         }
     }
 
-    private void LoadNextLevel()
+    private void ReadyNextLevel()
     {
-        SceneManager.LoadScene(1);
+        SendMessage("LoadNextLevel");
     }
 }
 
